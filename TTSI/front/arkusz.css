@@ -1,0 +1,79 @@
+h1
+{
+	text-align: center;
+	font-size: 130px;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	color: green;
+	margin: 0px;
+	padding-top: 90px;
+}
+footer
+{
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.dodaj
+{
+	float: left;
+}
+.usun
+{
+	float:left;
+	font-size:20px;
+}
+
+
+.rejestr
+{
+	float: right;
+	font-size: 16px;
+}
+
+body 
+{
+	text-align: center;
+	color: red;
+	font-weight: bold; 
+	font-family: 'Courier New',Courier New, monospace;
+	text-shadow: currentColor;
+	font-size: 32px;
+	background-image: url("tlo.jpg");
+	background-size: cover;
+}
+
+.silnik img
+{
+	padding-top: 20px;
+	width:400px;
+}
+.silnik img:not(:hover)
+{
+	width:400px;
+	position: fixed;
+	animation-name: small;
+	animation-duration: 1s;
+	
+}
+.silnik img:hover
+{
+	cursor: pointer;
+	position: fixed;
+	animation-name: large;
+	animation-duration: 1s;
+	width: 450px;
+}
+@keyframes large
+{
+	from {width: 400px;}
+	to {width: 450px;}
+}
+@keyframes small
+{
+	from {width: 450px;}
+	to {width: 400px;}
+}
+.silnik
+{
+	float: left;
+}

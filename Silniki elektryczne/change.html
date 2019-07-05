@@ -1,0 +1,29 @@
+<!DOCTYPE HTML/>
+<html lang = "pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Tesla
+	</title>
+	<link rel = "stylesheet" type = "text/css" href = "front/arkusz.css"/>
+	</head>
+
+<body>
+	<form method = "post" action="back/change.php">
+	<br/>
+			Nowe hasło: <br/>
+		<input type = "password" name = "haslo"/>
+		<br/>
+			Powtórz hasło: <br/>
+		<input type = "password" name = "rehaslo"/> <br/> <br/>
+		<span tal:define = "global errpass string:"/>
+		<span tal:content = "errpass"/>
+		<input type = "submit" value = "zmień hasło"/>
+
+	</form>
+
+	<br/>
+	<a href = "main.php?page=profil">Poprzedni ekran</a>
+</body>
+
+</html>

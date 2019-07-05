@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang = "pl">
+<head>
+	<meta charset="utf-8"/>
+	<link rel = "stylesheet" type="text/css" href="front/arkusz.css"/>
+	<title>
+		Zaloguj się
+	</title>
+	</head>
+
+<body>
+	<h1>Zaloguj się do forum</h1>
+	<br/> <a href = "back/rejestracja.php"> lub stwórz darmowe konto </a>
+
+<form method = "post" action = "back/zaloguj.php">
+	Login:
+	<br/>
+	<input type = "text" name ="login"/>
+	<br/><br/>
+	Hasło:
+	<br/>
+	<input type = "password" name ="haslo"/>
+	<span tal:define = "global error string: "/>
+	<div tal:content = "error"/>
+	<br/>
+	<input type = "submit" value = "Zaloguj się"/>
+</form>
+
+<br/>
+<a href = "index.html"> Przejdź do strony głównej</a>
+</body>
+
+</html>

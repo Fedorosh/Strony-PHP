@@ -1,0 +1,32 @@
+h1
+{
+	text-align: center;
+	color: darkred;
+	font-family: Impact, Charcoal, sans-serif;
+	/*font-style: italic;*/
+}
+.fiant
+{
+	background-image: url("cover.jpg");
+	background-size: cover;
+	display: block;
+	margin: auto;
+	width: 400px;
+	height: 400px;
+}
+.fiant:hover
+{
+	background-image: url("coverred.jpg");
+	cursor: wait;
+}
+body
+{
+	background-image: url("kosmos.jpg");
+	background-size: cover;
+}
+.pap
+{
+	display: block;
+	margin: auto;
+	width: 23%;
+}

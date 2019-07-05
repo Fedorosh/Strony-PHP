@@ -1,0 +1,1 @@
+alert("to jest próbny skrypt");

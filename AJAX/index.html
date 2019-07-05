@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AJAX - komunikator</title>
+
+<script type = "text/javascript">
+function wyslij(autor, wiadomosc, dest_autor, dest_wiadomosc){
+    // Pobierz dane z formularza i wyślij je AJAX-em na serwer
+    // np. metodą GET
+	var XMLHttpRequestObject = false;
+
+if (window.XMLHttpRequest) {
+  XMLHttpRequestObject = new XMLHttpRequest();
+}
+else if (window.ActiveXObject) {
+  XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+var url = "skrypt.php";
+var div1 = document.getElementById(dest_autor);
+var div2 = document.getElementById(dest_wiadomosc);
+
+XMLHttpRequestObject.open("POST", url);
+XMLHttpRequestObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+XMLHttpRequestObject.onreadystatechange = function()
+    {
+      if(XMLHttpRequestObject.readyState == 4 && 
+          XMLHttpRequestObject.status == 200){
+        var str = XMLHttpRequestObject.responseText;
+        div1.innerHTML = str;
+		div2.innerHTML = str;
+      }
+    }
+	var autor = document.getElementById(autor).value;
+	var wiadomosc = document.getElementById(wiadomosc).value;
+    autor = escape(autor);
+	wiadomosc = escape(wiadomosc);
+    XMLHttpRequestObject.send("autor=" + autor + "&wiadomosc=" + wiadomosc);
+
+}
+
+period = 5000; // Wywoływanie funkcji co 5 sekund
+setInterval(pobierz, period)
+function pobierz(){
+    // Wyślij na serwer żądanie AJAX-owe pobrania nowych wiadomości.
+    // Zapisz pobrane wiadomości na stronie w lewym panelu.
+}
+
+</script>
+
+
+</head>
+<body>
+<h1>AJAX - komunikator</h1>
+
+<div id="wiadomosci" style="float:left; width:50%;">
+<h2>Lista wiadomości:</h2>
+<div id="lista">Tu będą wiadomości...</div>
+</div>
+
+<div id="formularz" style="float:right; width:50%;">
+<h2>Wpisz wiadomość:</h2>
+
+<form action="#" onsubmit="wyslij('autor','wiadomosc','dest_autor','dest_wiadomosc'); return false;">
+Autor: <input type="text" size="20" name="autor" id = "autor" /><br>
+Wiadomość: <input type="text" size="80" name="wiadomosc" id = "wiadomosc" />
+<input type="submit" value="Wyślij" onsubmit="wyslij('autor','wiadomosc','dest_autor','dest_wiadomosc')" />
+</form>
+
+</div>
+
+<div id = "dest_autor">  </div>
+
+</body>
+</html>

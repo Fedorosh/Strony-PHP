@@ -1,0 +1,28 @@
+h1
+{
+	text-align: center;
+	font-size: 130px;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	color: orange;
+}
+body 
+{
+	text-align: center;
+	color: red;
+	font-weight: bold; 
+	font-family: 'Courier New',Courier New, monospace;
+	text-shadow: currentColor;
+	font-size: 32px;
+	background-image: url("tlo.jpg");
+	background-size: cover;
+}
+.silnik img:hover
+{
+	width: 450px;
+	height: 450px;
+	cursor: pointer;
+}
+.silnik
+{
+	float: left;
+}

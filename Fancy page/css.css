@@ -1,0 +1,45 @@
+body
+{
+	background-image: url("franklin_ty_kurwo.jpg");
+	background-size: cover;
+}
+h1
+{
+	text-align: center;
+	font-family: Palatino, 'Palatino Linotype', serif;
+	color: black;
+}
+.hejter a
+{
+	color: green;
+	font-size: 48px;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	text-decoration: none;
+	text-align: center;
+}
+.hejter a:hover
+{
+	color: orange;
+	text-decoration: underline;
+}
+#zegar
+{
+	color: black;
+	font-size: 32px;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	text-align: center;
+}
+#niech img:hover
+{
+	cursor: pointer;
+}
+.nie 
+{
+	display: block;
+	margin: auto;
+	width: 97%;
+}
+.nie #niech
+{
+	float: right;
+}
